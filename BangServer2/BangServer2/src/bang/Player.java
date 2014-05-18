@@ -19,6 +19,14 @@ public class Player implements Serializable{
 	public Player(ConnectionToClient c, int roomNumber) {
 		this.c = c;
 		this.room = roomNumber;
+		Message msg = new Message();
+		msg.setRoomNumber(-1);
+		msg.setStr(this.toString());
+		try {
+			c.sendToClient(new MessageAdapter(null).toOcsfAble(msg));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

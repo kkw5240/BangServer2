@@ -17,6 +17,7 @@ public class Room implements Serializable{
 		this.number = number;
 		this.title = title;
 		this.server = server;
+		this.players = new ArrayList<>();
 	}
 
 	/** Getter & Setter Methods **/

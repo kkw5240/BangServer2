@@ -257,11 +257,11 @@ public class ConnectionToClient extends Thread
           }
           
         } catch(ClassNotFoundException ex) { // when an unknown class is received
-        
+        	ex.printStackTrace();
           server.clientException(this, ex);
           
         } catch (RuntimeException ex) { // thrown by handleMessageFromClient or receiveMessageFromClient
-        
+        	ex.printStackTrace();
           server.clientException(this, ex);
         }
       }
