@@ -11,7 +11,7 @@ import ocsf.server.ConnectionToClient;
 public class Player implements Serializable{
 	/** Member Variable **/
 	private ConnectionToClient c = null;
-	private int room; int adb;
+	private int room;
 	private String id;
 	private int hp;
 	
