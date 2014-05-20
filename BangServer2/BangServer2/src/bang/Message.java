@@ -53,6 +53,7 @@ public class Message implements Serializable{
 
 	
 	/** For Serialization **/
+	/*
 	public void writeObject(ObjectOutputStream stream)throws IOException{
 		stream.writeObject(to);
 		stream.writeObject(from);
@@ -71,4 +72,5 @@ public class Message implements Serializable{
 			e.printStackTrace();
 		}
 	}
+	*/
 }

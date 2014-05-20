@@ -68,6 +68,7 @@ public class Player implements Serializable{
 
 	
 	/** For Serialization **/
+	/*
 	public void writeObject(ObjectOutputStream stream)throws IOException{
 		stream.defaultWriteObject();
 	}
@@ -78,4 +79,5 @@ public class Player implements Serializable{
 				e.printStackTrace();
 			}
 	}
+	*/
 }
