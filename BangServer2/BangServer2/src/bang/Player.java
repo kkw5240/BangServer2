@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
+import bang.card.Card;
+import bang.card.equipped.Volcanic;
 import ocsf.server.ConnectionToClient;
 
 public class Player implements Serializable{
@@ -14,6 +17,8 @@ public class Player implements Serializable{
 	private int room;
 	private String id;
 	private int hp;
+	private ArrayList<Card> cards = new ArrayList<>();
+	
 	
 	/** Constructor **/
 	public Player(ConnectionToClient c, int roomNumber) {
