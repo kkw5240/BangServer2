@@ -3,6 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import ocsf.server.AbstractServer;
+import ocsf.server.ConnectionToClient;
 
 
 public class Room implements Serializable{
@@ -21,11 +22,25 @@ public class Room implements Serializable{
 	}
 
 	/** Getter & Setter Methods **/
-	int getNumberOfPlayer(){
+	public int getNumberOfPlayer(){
 		return players.size();
 	}
-	int getNumber(){
+	public int getNumber(){
 		return number;
+	}
+	public Player getThisPlayer(ConnectionToClient cli) {
+		Player p = null;
+		
+		int index = 0;
+		for(Player tmp : players) {
+			if(tmp.getConn2Cli().equals(cli)) {
+				p = players.get(index);
+				break;
+			}
+			index++;
+		}
+		
+		return p;
 	}
 	
 	/** Methods **/
